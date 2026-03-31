@@ -1,0 +1,10 @@
+.services {
+  /* min-height: 100vh; */
+  padding: 20px;
+  background-color: teal;
+}
+
+.services__title {
+  text-align: center;
+  margin: 40px 0 20px 0;
+  font-si
