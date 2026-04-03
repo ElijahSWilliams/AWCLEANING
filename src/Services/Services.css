@@ -1,10 +1,36 @@
 .services {
   /* min-height: 100vh; */
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  /* Each card will be at least 300px wide and as wide as the container allows */
   padding: 20px;
-  background-color: teal;
+  /*  background-color: teal; */
 }
 
 .services__title {
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 0px;
   text-align: center;
-  margin: 40px 0 20px 0;
-  font-si
+  font-size: 50px;
+  color: #333;
+}
+
+.services__subtitle {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  color: #333;
+}
+
+.service-card {
+  text-align: center;
+  border-radius: 10px;
+  /* border: black solid 1px; */
+}
+
+.service-card-image {
+  width: 400px;
+  max-height: 500px;
+  border-radius: 10px;
+}
