@@ -34,3 +34,15 @@
   max-height: 500px;
   border-radius: 10px;
 }
+
+@media (max-width: 1024px) {
+  .services {
+    grid-template-columns: 1fr; /* Stack cards vertically on smaller screens */
+    gap: 40px; /* Increase gap for better spacing */
+  }
+
+  .service-card-image {
+    width: 100%; /* Make images responsive */
+    height: auto;
+  }
+}
