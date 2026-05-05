@@ -6,15 +6,18 @@ import Header from "./Header/Header.jsx";
 import Main from "./Main/Main.jsx";
 import Services from "./Services/Services.jsx";
 import About from "./About/About.jsx";
+import Contact from "./Contact/Contact.jsx";
 import "./App.css";
+import { HashRouter } from "react-router-dom";
 import { Routes } from "react-router-dom";
 import { Route } from "react-router-dom";
+import Chatbot from "./Chatbot/Chatbot.jsx";
 
 function App() {
   const [count, setCount] = useState(0);
 
   return (
-    <>
+    <HashRouter>
       <div className="app">
         {/* Floating Background Shapes */}
         <div className="bubble bubble1"></div>
@@ -31,10 +34,13 @@ function App() {
           <Route path="/" element={<Main />} />
           <Route path="/services" element={<Services />} />
           <Route path="/about" element={<About />} />
-          {/* <Route path="/contact" element={<Contact />} /> */}
+          <Route path="/contact" element={<Contact />} />
         </Routes>
+
+        {/* Chatbot */}
+        <Chatbot />
       </div>
-    </>
+    </HashRouter>
   );
 }
 

@@ -1,6 +1,12 @@
 import "./Main.css";
 
 function Main() {
+  function handleCTAButtonClick() {
+    alert(
+      "Thank you for your interest! Please contact us at info@awcleaning.com or call (123) 456-7890.",
+    );
+  }
+
   return (
     <>
       {/* Header Text */}
@@ -37,7 +43,9 @@ function Main() {
           <p className="main__image-text">
             Spotless Spaces, Happy Faces, Peaceful Places!
             <br />
-            <button className="main__cta-button">Get a Free Quote</button>
+            <button className="main__cta-button" onClick={handleCTAButtonClick}>
+              Get a Free Quote
+            </button>
           </p>
         </div>
       </div>
