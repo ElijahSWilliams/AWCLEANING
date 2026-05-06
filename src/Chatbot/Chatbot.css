@@ -3,11 +3,11 @@
 .chatbot {
   background-color: white;  
   padding: 20px;   
-  max-width: 400px; 
+  width: 300px; 
   max-height: 400px;
   position: absolute; 
   top: 200px; 
-  right: 420px; /* hide off screen */ 
+  right: -15px; /* hide off screen */ 
   transition: right 0.3 ease;
   border-radius: 10px; overflow-y: auto;
 } 
@@ -31,6 +31,7 @@
 }
 
 .chatbot__send-btn {
+  display: flex;
   margin-top: 10px;
   margin-left: auto;
   margin-right: auto;

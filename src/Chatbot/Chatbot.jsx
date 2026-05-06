@@ -14,7 +14,7 @@ function Chatbot() {
     const userMessage = input; // Store user message
 
     //display user message immediately
-    setMessages((prev) => [...prev, { role: "User", text: userMessage }]); //take old messages 'prev' and add new message to end of array
+    setMessages((prev) => [...prev, { role: "You (User)", text: userMessage }]); //take old messages 'prev' and add new message to end of array
 
     setInput(""); // Clear input field
 
@@ -35,7 +35,7 @@ function Chatbot() {
 
       const data = await res.json(); //get response from backend, which should contain 'reply' key with chatbot's response
 
-      setMessages((prev) => [...prev, { role: "Bot", text: data.reply }]); //add chatbot's response to messages array, which will trigger re-render and display the new message in the UI
+      setMessages((prev) => [...prev, { role: "Sudds (Bot)", text: data.reply }]); //add chatbot's response to messages array, which will trigger re-render and display the new message in the UI
     } catch (err) {
       console.error("Error:", err);
 
@@ -43,7 +43,7 @@ function Chatbot() {
       setMessages((prev) => [
         ...prev,
         {
-          role: "Bot",
+          role: "Sudds (Bot)",
           text: "Something went wrong. Please try again.",
         },
       ]);
@@ -56,7 +56,7 @@ function Chatbot() {
      <button className="chatbot__tab" onClick={() => setIsOpen(!isOpen)}> {/* toggle tab */}
         Chat
         </button>
-        
+
     <div className="chatbot">
       <div> 
         {/* Render messages in UI */}
@@ -73,7 +73,7 @@ function Chatbot() {
         onChange={(e) =>
           setInput(e.target.value)
         } /* Keep input synced with state */
-        placeholder="Ask something..."
+        placeholder="How Can I Help?"
         onKeyDown={(e) => e.key === "Enter" && sendMessage()} //allow user to press Enter to send message
       />
       <button onClick={sendMessage} className="chatbot__send-btn">
