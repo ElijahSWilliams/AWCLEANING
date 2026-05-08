@@ -4,7 +4,7 @@ import { useState } from "react";
 function Chatbot() {
   const [input, setInput] = useState("");
   const [messages, setMessages] = useState([]); 
-  const {isOpen, setIsOpen} = useState();
+  const [open, setOpen] = useState();
 
   //
   const sendMessage = async () => {
@@ -53,15 +53,17 @@ function Chatbot() {
   return ( 
     <div className="chatbot__view">  
      {/* Chatbot tab */} 
-     <button className="chatbot__tab" onClick={() => setIsOpen(!isOpen)}> {/* toggle tab */}
-        Chat
+     <button className={`chatbot__toggle-btn ${open ? "chatbot__hide-toggle-btn" : ""}`} onClick={() => setOpen(!open)}> {/* toggle tab */}
+       {open ? "x": "💬"}
         </button>
 
-    <div className="chatbot">
+    <div className={`chatbot ${open ? "chatbot__open" : ""}`}> 
+    {/* Chatbot close btn */} 
+    <button className="chatbot__close-btn" onClick={() => setOpen(!open)}>X</button>
       <div> 
         {/* Render messages in UI */}
         {messages.map((m, i) => (
-          <p key={i}>
+          <p key={i} className="chatbot__text">
             <b>{m.role}:</b> {m.text}{" "}
             {/* Show who said what (user or bot) and show the message */}
           </p>
