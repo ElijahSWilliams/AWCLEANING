@@ -1,13 +1,14 @@
 .chatbot {
-  background-color: white;  
-  padding: 20px;   
-  width: 300px; 
+  background-color: white;
+  padding: 20px;
+  width: 300px;
   max-height: 400px;
-  position: absolute; 
-  top: 200px; 
-  right: 15px; /* hide off screen */ 
+  position: fixed;
+  top: 200px;
+  right: 15px; /* hide off screen */
   transition: right 0.3 ease;
-  border-radius: 10px; overflow-y: auto; 
+  border-radius: 10px;
+  overflow-y: auto;
   opacity: 0;
   pointer-events: none;
   transform: translateY(20px);
@@ -15,48 +16,48 @@
     opacity 0.3s ease,
     transform 0.3s ease;
   z-index: 998;
-}  
+}
 
 /* make chatbot visible */
 .chatbot__open {
   opacity: 1;
   pointer-events: all;
   transform: translateY(0);
-}  
+}
 
 .chatbot__hide-toggle-btn {
   opacity: 0;
-  pointer-events: none; 
+  pointer-events: none;
 }
 
 .chatbot__close-btn {
   background: none;
-  border: none; 
+  border: none;
 }
 
-/* chatbot circle btn */ 
-.chatbot__toggle-btn { 
-  display: flex; 
-  justify-content: center; 
+/* chatbot circle btn */
+.chatbot__toggle-btn {
+  display: flex;
+  justify-content: center;
   align-items: center;
-  width: 65px; 
+  width: 65px;
   height: 65px;
-  border-radius: 50%; 
+  border-radius: 50%;
   border: none;
-  background: none;  
-  position: fixed; 
-  top: 100px;
-  right: 20px; 
+  background: none;
+  position: fixed;
+  bottom: 90px;
+  right: 20px;
   background-color: #007bff;
   color: whitesmoke;
-  font-size: 25px; 
+  font-size: 25px;
   z-index: 999;
-  transition: transform 0.2s ease; 
-  cursor: pointer; 
-  
-} 
+  transition: transform 0.2s ease;
+  cursor: pointer;
+}
 
-.chatbot__toggle:hover { /* Hover effect for circle button */
+.chatbot__toggle:hover {
+  /* Hover effect for circle button */
   transform: scale(1.08);
 }
 
@@ -66,16 +67,15 @@
   padding: 10px;
   margin-top: 10px;
   border: none;
-  border-bottom : 1px solid black; 
-  cursor: pointer; 
-  
-} 
+  border-bottom: 1px solid black;
+  cursor: pointer;
+}
 
 .chatbot__text {
- /*  background-color: rgba(222, 233, 230, 0.943); 
+  /*  background-color: rgba(222, 233, 230, 0.943); 
   border-radius: 20px;
   font-size: 15px; */
-} 
+}
 
 .chatbot__send-btn {
   display: flex;
