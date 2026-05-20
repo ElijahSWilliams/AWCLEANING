@@ -89,3 +89,21 @@
   border-radius: 4px;
   cursor: pointer;
 }
+
+/* Mobile */
+
+@media (max-width: 1024px) {
+  .chatbot {
+    width: 90%;
+    max-height: 300px;
+    top: 150px;
+    right: 5%;
+  }
+
+  .chatbot__toggle-btn {
+    width: 35px;
+    height: 35px;
+    bottom: 20px;
+    right: 5%;
+  }
+}
