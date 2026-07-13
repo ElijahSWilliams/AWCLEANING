@@ -20,7 +20,7 @@ function Chatbot() {
 
     try {
       //send user message to backend
-      const res = await fetch("http://localhost:3000/chat", {
+      const res = await fetch(`${import.meta.env.VITE_API_URL}/chat`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

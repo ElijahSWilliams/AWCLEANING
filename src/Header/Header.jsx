@@ -13,6 +13,7 @@ function Header() {
       <button className="hamburger" onClick={() => setIsMenuOpen(!isMenuOpen)}>
         =
       </button>
+
       <nav className="nav">
         <ul className={isMenuOpen ? "active" : ""}>
           <li>
